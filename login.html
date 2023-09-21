@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    /><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="/style.css" rel="stylesheet" />
+    <title>Login Page</title>
+  </head>
+
+  <body>
+    <div class="container-fluid mb-3" style="margin-top: 10%">
+      <div class="row main-content bg-dark">
+        <div class="col-md-4 company_info">
+          <div class="logo-container">
+            <img src="assets/images/logo.jpg" alt="logo" class="logo-image" />
+            <!-- <div class="logo"></div> -->
+          </div>
+        </div>
+        <div class="col-md-8 form">
+          <!-- <div class="row" style="align-items: center;"> -->
+
+          <h2 style="font-family:Georgia, 'Times New Roman', Times, serif"; class="welcomeText mt-3 text-light">  Welcome</h2>
+
+          <form id="exampleForm" novalidate method="get">
+            <div class="row">
+              <label class="form-label" for="text">Name</label>
+              <input
+                style="border-radius: 25px"
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+              />
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">Please fill the field</div>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label" for="password">Password</label>
+              <input
+                style="border-radius: 25px"
+                type="password"
+                class="form-control"
+                placeholder="Enter your password"
+                required
+              />
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">Please fill the field</div>
+            </div>
+            
+            <div class="abc mb-1">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="remember"
+                name="remember"
+                required
+              /><label class="form-check-label"> Remember me</label> <span class="password"><a href="#">Forgot Password</a>
+            </div>
+            <div class="row mb-3 mt">
+              <input
+                type="submit"
+                style="border-radius: 25px"
+                ;
+                class="btn btn-primary btn-block"
+                value="Login"
+              />
+            </div>
+            <div class="row">
+              Don't have an account?<span class="ml-2 mb-1">
+                <a href="#">Sign up</a></span
+              >
+            </div>
+            
+            <script>
+              // JavaScript for custom validation
+              const exampleForm = document.getElementById('exampleForm');
+            
+              exampleForm.addEventListener('submit', function (event) {
+                if (!exampleForm.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+            
+                exampleForm.classList.add('was-validated');
+              });
+            </script>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
